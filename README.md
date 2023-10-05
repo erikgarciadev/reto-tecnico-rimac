@@ -19,7 +19,7 @@
    - [ ] Realizar componentes
       - [X] Header
       - [X] Footer
-      - [ ] Button 
+      - [X] Button 
       - [ ] Badge
       - [ ] Input
       - [ ] Stepper
