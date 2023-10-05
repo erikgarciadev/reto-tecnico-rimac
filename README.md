@@ -21,7 +21,8 @@
       - [X] Footer
       - [X] Button 
       - [X] Badge
-      - [ ] Input
+      - [X] Input
+      - [ ] Checkbox
       - [ ] Stepper
       - [ ] CardOption
       - [ ] CardPlan
