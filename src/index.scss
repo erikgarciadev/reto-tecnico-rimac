@@ -5,9 +5,12 @@
   font-family: "Latto", sans-serif;
 }
 
+:root {
+  --grey-100: #03050f;
+  --grey-80: #2b304e;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1000px;
 }
-
-

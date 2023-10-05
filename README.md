@@ -10,15 +10,15 @@
       Se utiliza para realizar el manejo del formulario y su validación
    - [sass](https://www.npmjs.com/package/sass)
 
-      Se utiliza para realizar uso del procesador sass, que nos ayudará con el nesting
+      Se utiliza para realizar uso del procesador sass, que nos ayudará con el nesting y uso de mixins
 
    
    
 
 ## Tareas realizadas
    - [ ] Realizar componentes
-      - [ X ] Header
-      - [ ] Footer
+      - [X] Header
+      - [X] Footer
       - [ ] Button 
       - [ ] Badge
       - [ ] Input
