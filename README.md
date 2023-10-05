@@ -17,7 +17,7 @@
 
 ## Tareas realizadas
    - [ ] Realizar componentes
-      - [ ] Navbar
+      - [ X ] Header
       - [ ] Footer
       - [ ] Button 
       - [ ] Badge
