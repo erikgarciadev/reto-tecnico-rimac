@@ -20,7 +20,7 @@
       - [X] Header
       - [X] Footer
       - [X] Button 
-      - [ ] Badge
+      - [X] Badge
       - [ ] Input
       - [ ] Stepper
       - [ ] CardOption
