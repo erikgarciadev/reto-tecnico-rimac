@@ -1,5 +1,6 @@
 import Badge from "./components/Badge";
 import Button from "./components/Button";
+import CheckBox from "./components/Checkbox/Checkbox";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Input from "./components/Input";
@@ -115,6 +116,10 @@ function App() {
                     age: 70,
                   }}
                 />
+              </div>
+              <div>
+            
+                <CheckBox />
               </div>
             </div>
           </div>

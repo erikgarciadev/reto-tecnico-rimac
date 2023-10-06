@@ -22,7 +22,7 @@
       - [X] Button 
       - [X] Badge
       - [X] Input
-      - [ ] Checkbox
+      - [X] Checkbox
       - [ ] Stepper
       - [X] OptionCard
       - [X] PlanCard
