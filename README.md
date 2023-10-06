@@ -24,8 +24,8 @@
       - [X] Input
       - [ ] Checkbox
       - [ ] Stepper
-      - [ ] CardOption
-      - [ ] CardPlan
+      - [X] OptionCard
+      - [ ] PlanCard
    - [ ] Diseñar las vistas
       - [ ] Vista Datos
       - [ ] Vista Planes y Coberturas

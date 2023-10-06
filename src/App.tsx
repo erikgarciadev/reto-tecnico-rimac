@@ -3,6 +3,7 @@ import Button from "./components/Button";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Input from "./components/Input";
+import OptionCard from "./components/OptionCard";
 import { TYPES_BADGES } from "./utils/constants";
 
 function App() {
@@ -58,6 +59,24 @@ function App() {
               <div>
                 <Input label="Celular" value={"5130216147"} />
               </div>
+            </div>
+            <div
+              style={{
+                padding: "1em",
+              }}
+            >
+              <OptionCard
+                imageUrl="./images/protection-light.svg"
+                title="Para mi"
+                subTitle="Cotiza tu seguro de salud y agrega familiares si así lo deseas."
+              />
+
+              <OptionCard
+                selected
+                imageUrl="./images/add-user-light.svg"
+                title="Para alguien mas"
+                subTitle="Realiza una cotización para uno de tus familiares o cualquier persona."
+              />
             </div>
           </div>
         </div>
