@@ -25,7 +25,7 @@
       - [ ] Checkbox
       - [ ] Stepper
       - [X] OptionCard
-      - [ ] PlanCard
+      - [X] PlanCard
    - [ ] Diseñar las vistas
       - [ ] Vista Datos
       - [ ] Vista Planes y Coberturas

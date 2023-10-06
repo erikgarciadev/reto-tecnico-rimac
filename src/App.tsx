@@ -4,7 +4,8 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Input from "./components/Input";
 import OptionCard from "./components/OptionCard";
-import { TYPES_BADGES } from "./utils/constants";
+import PlanCard from "./components/PlanCard";
+import { TYPES_BADGES, TYPES_OPTIONS } from "./utils/constants";
 
 function App() {
   return (
@@ -63,6 +64,7 @@ function App() {
             <div
               style={{
                 padding: "1em",
+                background: "red",
               }}
             >
               <OptionCard
@@ -77,6 +79,43 @@ function App() {
                 title="Para alguien mas"
                 subTitle="Realiza una cotización para uno de tus familiares o cualquier persona."
               />
+              <div
+                style={{
+                  display: "flex",
+                  gap: "1em",
+                  flexWrap: "inherit",
+                  overflow: "auto",
+                }}
+              >
+                <PlanCard
+                  typeOption={TYPES_OPTIONS.FOR_SOMEONE}
+                  onClick={() => {}}
+                  plan={{
+                    name: "Plan en Casa y Clínica",
+                    price: 99,
+                    description: [
+                      "Consultas en clínica para cualquier especialidad.",
+                      "Medicinas y exámenes derivados cubiertos al 80%.",
+                      "Atención médica en más de 200 clínicas del país.",
+                    ],
+                    age: 70,
+                  }}
+                />
+                <PlanCard
+                  typeOption={TYPES_OPTIONS.FOR_ME}
+                  onClick={() => {}}
+                  plan={{
+                    name: "Plan en Casa",
+                    price: 99,
+                    description: [
+                      "Videoconsulta con especialistas de psicología y nutrición.",
+                      "Acceso a videos y recursos sobre bienestar.",
+                      "Incluye todos los beneficios del Plan en Casa.",
+                    ],
+                    age: 70,
+                  }}
+                />
+              </div>
             </div>
           </div>
         </div>
