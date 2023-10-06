@@ -44,7 +44,7 @@ const OptionCard: FC<Props> = ({
       <div className="option-card__bottom">
         <div className="option-card__bottom__content">
           <img src={imageUrl} height="32px" width="32px" alt="Option Image" />
-          <h2>{props.title}</h2>
+          <h3>{props.title}</h3>
         </div>
         <p className="option-card__bottom__subTitle">{props.subTitle}</p>
       </div>
