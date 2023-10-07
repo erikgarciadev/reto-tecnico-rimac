@@ -24,3 +24,9 @@
   margin: 0 auto;
   max-width: 1000px;
 }
+
+.center-full-page {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}

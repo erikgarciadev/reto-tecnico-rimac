@@ -11,3 +11,8 @@ export const TYPES_OPTIONS = Object.freeze({
 });
 
 export const PERCENTAGE_DISCOUNT_FOR_SOMEONE = 0.05;
+
+export const PATHS = Object.freeze({
+  PLANS: 'plans',
+  SUMMARY: 'summary'
+})

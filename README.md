@@ -12,6 +12,10 @@
 
       Se utiliza para realizar uso del procesador sass, que nos ayudará con el nesting y uso de mixins
 
+   - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+
+      Se utiliza para realizar el desplazamiento entre páginas
+
    
    
 
