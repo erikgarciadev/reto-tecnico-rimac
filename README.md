@@ -23,9 +23,10 @@
       - [X] Badge
       - [X] Input
       - [X] Checkbox
-      - [ ] Stepper
+      - [X] Stepper
       - [X] OptionCard
       - [X] PlanCard
+      - [X] ButtonBack
    - [ ] Diseñar las vistas
       - [ ] Vista Datos
       - [ ] Vista Planes y Coberturas
