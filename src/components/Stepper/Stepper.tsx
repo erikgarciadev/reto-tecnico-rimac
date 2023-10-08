@@ -1,13 +1,11 @@
 import { FC } from "react";
 import "./styles.scss";
 import Step from "./Step";
+import { Step as StepProps } from "../../interfaces";
 
 interface Props {
   currentStep: number;
-  steps: {
-    text: string;
-    path: string;
-  }[];
+  steps: StepProps[];
 }
 
 const Stepper: FC<Props> = ({ currentStep, steps }) => {

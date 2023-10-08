@@ -12,3 +12,8 @@ export type TypesBadgesValues =
 
 export type TypesOptionsValues =
   (typeof TYPES_OPTIONS)[keyof typeof TYPES_OPTIONS];
+
+export interface Step {
+  text: string;
+  path: string;
+}

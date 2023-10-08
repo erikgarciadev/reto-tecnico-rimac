@@ -2,7 +2,7 @@ import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 import { PATHS } from "../utils/constants";
 import Spinner from "../components/Spinner";
-const UserInformation = React.lazy(() => import("../pages/UserInformation"));
+const Home = React.lazy(() => import("../pages/Home"));
 const Plans = React.lazy(() => import("../pages/Plans"));
 const Summary = React.lazy(() => import("../pages/Summary"));
 
@@ -19,7 +19,7 @@ const ApplicationRoutes = () => {
               </div>
             }
           >
-            <UserInformation />
+            <Home />
           </React.Suspense>
         }
       />

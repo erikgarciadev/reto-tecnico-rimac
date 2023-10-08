@@ -1,9 +1,14 @@
+import { FC } from "react";
 import { ArrowLeftIcon } from "../Icons";
 import "./styles.scss";
 
-const ButtonBack = () => {
+interface Props {
+  onClick?: () => void;
+}
+
+const ButtonBack: FC<Props> = ({ onClick = () => {} }) => {
   return (
-    <div className="button-back">
+    <div className="button-back" onClick={onClick}>
       <div className="button-back__circle">
         <ArrowLeftIcon />
       </div>
