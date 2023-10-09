@@ -25,7 +25,7 @@ const Home = () => {
         </div>
         <picture>
           <source
-            media="(min-width: 601px)"
+            media="(min-width: 950px)"
             srcSet="./images/blur-left.webp"
             type="image/webp"
           />
@@ -37,7 +37,7 @@ const Home = () => {
         </picture>
         <picture>
           <source
-            media="(min-width: 601px)"
+            media="(min-width: 950px)"
             srcSet="./images/blur-right.webp"
             type="image/webp"
           />

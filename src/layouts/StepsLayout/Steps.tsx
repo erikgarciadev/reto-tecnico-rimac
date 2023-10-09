@@ -6,11 +6,7 @@ import { getDataStep } from "../../utils/util";
 import "./styles.scss";
 
 const Steps = () => {
-  const { currentStep, prevPath } = getDataStep(
-    steps,
-    window.location.pathname
-  );
-
+  const { currentStep, prevPath } = getDataStep(steps, window.location.hash);
 
   return (
     <div className="container-steps">
