@@ -25,7 +25,7 @@
    
 
 ## Tareas realizadas
-   - [ ] Realizar componentes
+   - [X] Realizar componentes
       - [X] Header
       - [X] Footer
       - [X] Button 
@@ -36,10 +36,10 @@
       - [X] OptionCard
       - [X] PlanCard
       - [X] ButtonBack
-   - [ ] Diseñar las vistas
-      - [ ] Vista Datos
-      - [ ] Vista Planes y Coberturas
-      - [ ] Vista Resumen
+   - [X] Diseñar las vistas
+      - [X] Vista Datos
+      - [X] Vista Planes y Coberturas
+      - [X] Vista Resumen
 
 ## Levantamiento del proyecto
    - Ejecutar en su consola el siguiente comando: 
