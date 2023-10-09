@@ -1,13 +1,14 @@
 .plan-card {
     box-shadow: 0px 1px 32px 0px #aeacf359;
     padding: 68px 32px 25px 32px;
-    width: 288px;
+    width: 100%;
     min-width: 288px;
     background-color: #fff;
     border-radius: 24px;
     position: relative;
     display: flex;
     flex-direction: column;
+    height: 638px;
 
     &__content-information {
         display: flex;

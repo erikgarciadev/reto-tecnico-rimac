@@ -55,7 +55,7 @@ const PlanCard: FC<Props> = ({ plan, onClick, typeOption }) => {
           ))}
         </ul>
         <div>
-          <Button onClick={onClick} primary>
+          <Button onClick={onClick} fullWidth primary>
             Seleccionar Plan
           </Button>
         </div>
