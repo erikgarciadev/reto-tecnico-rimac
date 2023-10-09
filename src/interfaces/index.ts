@@ -17,3 +17,13 @@ export interface Step {
   text: string;
   path: string;
 }
+
+export interface User {
+  name: string;
+  lastName: string;
+  birthDay: string;
+  phoneNumber?: string;
+  dni?: string;
+  acceptPrivacity?: boolean;
+  acceptComunication?: boolean;
+}

@@ -20,3 +20,10 @@ export const getDataStep = (steps: Step[], pathname: string) => {
     currentStep: index + 1,
   };
 };
+
+export const getYears = (birthday: string) => {
+  const today = new Date();
+  const birthDate = new Date(birthday);
+
+  return today.getFullYear() - birthDate.getFullYear();
+};

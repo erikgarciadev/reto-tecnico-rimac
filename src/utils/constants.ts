@@ -1,4 +1,9 @@
 export const PHONE_NUMBER = "(01) 411 6001";
+export const BASE_URL_API =
+  "https://rimac-front-end-challenge.netlify.app/api";
+
+export const PATH_USER = "user.json";
+export const PATH_PLANS = "plans.json";
 
 export const TYPES_BADGES = Object.freeze({
   DEFAULT: "default",
@@ -16,4 +21,9 @@ export const PATHS = Object.freeze({
   HOME: "/",
   PLANS: "/plans",
   SUMMARY: "/summary",
+});
+
+export const SLICES = Object.freeze({
+  HOME: "home",
+  PLANS: "plans",
 });

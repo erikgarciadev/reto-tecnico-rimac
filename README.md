@@ -2,9 +2,9 @@
 
 
 ## Librerias usadas
-   - [axios](https://www.npmjs.com/package/axios)
+   - [swiper](https://www.npmjs.com/package/swiper)
       
-      Se utiliza para facilitar la petición de los recursos
+      Se utiliza para realizar un slider para los planes
    - [react-hook-form](https://www.npmjs.com/package/react-hook-form)
       
       Se utiliza para realizar el manejo del formulario y su validación
@@ -15,6 +15,11 @@
    - [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 
       Se utiliza para realizar el desplazamiento entre páginas
+
+   - @reduxjs/toolkit
+   - react-redux
+
+      Se utiliza para realizar la gestión del estado global en la aplicación
 
    
    

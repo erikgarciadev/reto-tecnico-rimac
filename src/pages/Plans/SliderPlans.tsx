@@ -10,13 +10,20 @@ import PlanCard from "../../components/PlanCard";
 import "./styles.scss";
 import { ArrowLeftIcon, ArrowRightIcon } from "../../components/Icons";
 import { classNames } from "../../utils/util";
-import { Plan } from "../../interfaces";
+import { Plan, TypesOptionsValues } from "../../interfaces";
+import { useAppDispatch } from "../../app/hooks";
+import { updateSelectedPlan } from "../../slices/plansSlice";
+import { useNavigate } from "react-router-dom";
+import { PATHS } from "../../utils/constants";
 
-interface  Props {
-    plans: Plan[]
+interface Props {
+  plans: Plan[];
+  typeOption: TypesOptionsValues;
 }
 
-const SliderPlans:FC<Props> = ({plans}) => {
+const SliderPlans: FC<Props> = ({ plans, typeOption }) => {
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const [sliderBegOrNot, handleSliderByState] = useState({
     isFirst: true,
     isLast: false,
@@ -36,6 +43,11 @@ const SliderPlans:FC<Props> = ({plans}) => {
       isFirst: swiper.isBeginning,
       isLast: swiper.isEnd,
     });
+  };
+
+  const handleClickPlan = (plan: Plan) => {
+    dispatch(updateSelectedPlan(plan));
+    navigate(PATHS.SUMMARY);
   };
 
   return (
@@ -68,12 +80,13 @@ const SliderPlans:FC<Props> = ({plans}) => {
         }}
       >
         {plans.map((plan, i) => (
-          <SwiperSlide className="container-slide">
+          <SwiperSlide key={i} className="container-slide">
             <PlanCard
-              key={i}
               plan={plan}
-              typeOption="for_me"
-              onClick={() => {}}
+              typeOption={typeOption}
+              onClick={(plan) => {
+                handleClickPlan(plan);
+              }}
             />
           </SwiperSlide>
         ))}

@@ -1,12 +1,59 @@
+import { useAppSelector } from "../../app/hooks";
 import Badge from "../../components/Badge";
 import Button from "../../components/Button";
 import Checkbox from "../../components/Checkbox";
 import Input from "../../components/Input";
+import { useEffect } from "react";
+import { useForm, SubmitHandler, Controller } from "react-hook-form";
 import "./styles.scss";
+import { useDispatch } from "react-redux";
+import { updateUser } from "../../slices/homeSlice";
+import { useNavigate } from "react-router-dom";
+import { PATHS } from "../../utils/constants";
+
+interface Inputs {
+  dni: string;
+  phoneNumber: string;
+  acceptPrivacity: boolean;
+  acceptComunication: boolean;
+}
 
 const FormInformation = () => {
+  const user = useAppSelector((state) => state.home.user);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const {
+    register,
+    control,
+    setValue,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<Inputs>();
+
+  useEffect(() => {
+    setValue("dni", user?.dni ?? "");
+    setValue("phoneNumber", user?.phoneNumber ?? "");
+    setValue("acceptComunication", user?.acceptComunication ?? false);
+    setValue("acceptPrivacity", user?.acceptPrivacity ?? false);
+  }, [user]);
+
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    if (!user) return;
+    const { dni, acceptComunication, acceptPrivacity, phoneNumber } = data;
+    const dataUser = {
+      ...user,
+      acceptPrivacity,
+      acceptComunication,
+      dni,
+      phoneNumber,
+    };
+    dispatch(updateUser(dataUser));
+    navigate(PATHS.PLANS);
+  };
+
   return (
-    <form className="form">
+    <form onSubmit={handleSubmit(onSubmit)} className="form">
       <div className="form__container_title">
         <div>
           <Badge>Seguro Salud Flexible</Badge>
@@ -25,23 +72,67 @@ const FormInformation = () => {
         <select>
           <option>DNI</option>
         </select>
-        <Input border={false} label="Nro. de documento" value={"30216147"} />
+        <Input
+          {...register("dni", { required: true })}
+          border={false}
+          label="Nro. de documento"
+        />
+      </div>
+      {errors.dni ? <p className="error">Requerido</p> : null}
+      <div className="form-container-input">
+        <Input
+          {...register("phoneNumber", { required: true })}
+          label="Celular"
+        />
+        {errors.phoneNumber ? <p className="error">Requerido</p> : null}
       </div>
 
-      <div className="form-container-input">
-        <Input label="Celular" value="51032332" />
+      <div className="container-checkbox-error">
+        <div className="container-checkbox">
+          <Controller
+            control={control}
+            name="acceptPrivacity"
+            rules={{
+              required: true,
+            }}
+            render={({ field: { onChange, value } }) => (
+              <Checkbox
+                onChange={(e) => onChange(e.target.checked)}
+                checked={value}
+              />
+            )}
+          ></Controller>
+          <label>Acepto la Política de Privacidad</label>
+        </div>
+        {errors.acceptPrivacity ? <p className="error">Requerido</p> : null}
       </div>
-      <div className="container-checkbox">
-        <Checkbox />
-        <label>Acepto la Política de Privacidad</label>
+      <div>
+        <div className="container-checkbox-error">
+          <div className="container-checkbox">
+            <Controller
+              control={control}
+              name="acceptComunication"
+              rules={{
+                required: true,
+              }}
+              render={({ field: { onChange, value } }) => (
+                <Checkbox
+                  onChange={(e) => onChange(e.target.checked)}
+                  checked={value}
+                />
+              )}
+            ></Controller>
+            <label>Acepto la Política Comunicaciones Comerciales</label>
+          </div>
+          {errors.acceptComunication ? (
+            <p className="error">Requerido</p>
+          ) : null}
+        </div>
       </div>
-      <div className="container-checkbox">
-        <Checkbox />
-        <label>Acepto la Política Comunicaciones Comerciales</label>
-      </div>
+
       <p className="form__terms">Aplican Términos y Condiciones.</p>
 
-      <Button>Cotiza aquí</Button>
+      <Button type="submit">Cotiza aquí</Button>
     </form>
   );
 };

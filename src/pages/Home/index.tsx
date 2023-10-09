@@ -1,9 +1,18 @@
+import { useEffect } from "react";
+import { useAppDispatch } from "../../app/hooks";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import FormInformation from "./FormInformation";
 import "./styles.scss";
+import { getDataUser } from "../../slices/homeSlice";
 
 const Home = () => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(getDataUser());
+  }, []);
+
   return (
     <>
       <Header transparent />

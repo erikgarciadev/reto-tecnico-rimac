@@ -13,7 +13,7 @@ import "./styles.scss";
 interface Props {
   plan: Plan;
   typeOption: TypesOptionsValues;
-  onClick: () => void;
+  onClick: (plan: Plan) => void;
 }
 
 const PlanCard: FC<Props> = ({ plan, onClick, typeOption }) => {
@@ -55,7 +55,16 @@ const PlanCard: FC<Props> = ({ plan, onClick, typeOption }) => {
           ))}
         </ul>
         <div>
-          <Button onClick={onClick} fullWidth primary>
+          <Button
+            onClick={() => {
+              onClick({
+                ...plan,
+                price: finalPrice,
+              });
+            }}
+            fullWidth
+            primary
+          >
             Seleccionar Plan
           </Button>
         </div>
